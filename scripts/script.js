@@ -27,5 +27,63 @@ fetch("https://random-word-api.herokuapp.com/word?number=1")
 const loadData = (chosenWord) => {
   console.log(chosenWord);
 
+  // assigning variables
+
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+
+  let word; // Random word from the API link
+  let guess; // The chosen guess letter
+  let guessesList = []; // Stored guessing letter in array
+  let lives; // Number of Lives left to play
+  let counter; // Counter of correct guesses
+  let space; // Number of spaces or dashes inside the random word
+  const showLives = document.getElementById("my-lives");
+  const showClue = document.getElementById("clue");
+
+  // creating the alphabet buttons' section
+
+  const letterButtons = function () {
+    buttons = document.getElementById("buttons"); // getting the letters buttons
+    letters = document.createElement("ul"); // creating an ul of letters
+
+    for (let i = 0; i < alphabet.length; i++) {
+      // Looping through the alphabet list
+      letters.id = "alphabet";
+      list = document.createElement("li"); // creating the list inside the ul (letters)
+
+      list.innerHTML = alphabet[i];
+      buttons.appendChild(letters);
+      letters.appendChild(list);
+
+      checkLetters(); // added after creating the onclick event listener
+    }
+  };
 
 }
