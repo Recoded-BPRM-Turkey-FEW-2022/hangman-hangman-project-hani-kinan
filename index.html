@@ -15,34 +15,50 @@
 <!-- Add a button to play again. -->
 
 <body>
-  <div class="wrapper">
-    <h1>Hangman</h1>
-    <h2>Hani & Kinan</h2>
-    <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+  <div id="main">
+    <div class="wrapper">
+      <h1>Hangman</h1>
+      <h2>Hani & Kinan</h2>
+      <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+    </div>
+  
+    <div class="wrapper">
+      <div id="buttons">
+        <!-- Add buttons that correspond to each letter from a to z. -->
+      </div>
+  
+      <div id="hold">
+        <!-- Add a section that will hold the blanks that are going to be equal to the number of characters for the current word. -->
+      </div>
+  
+      <p id="my-lives"></p> <!-- Add a counter from 10 that will decrease by 1 with every wrong guess. -->
+  
+      <p id="clue">Clue -</p>
+      <div class="container">
+        <button id="hint">Hint</button> <!-- Bonus: Add a hint button. -->
+        <button id="reset">Play again</button> <!-- Add a button to play again. -->
+      </div>
+  
+    </div>
   </div>
-
-  <div class="wrapper">
-    <div id="buttons">
-      <!-- Add buttons that correspond to each letter from a to z. -->
+  <div id="kid">
+    <img width="500" height="200" style="display:none;" src="../images/Lake.gif" alt="" id="lake">
+    <div id="body">
+      <canvas id="stickman" width="800px" height="840">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+      <img style="display:none;" src="./images/0.gif" alt="" id="frm0">
+      <img style="display:none;" src="./images/1.gif" alt="" id="frm1">
+      <img style="display:none;" src="./images/2.gif" alt="" id="frm2">
+      <img style="display:none;" src="./images/3.gif" alt="" id="frm3">
+      <img style="display:none;" src="./images/4.gif" alt="" id="frm4">
+      <img style="display:none;" src="./images/5.gif" alt="" id="frm5">
+      <img style="display:none;" src="./images/6.gif" alt="" id="frm6">
+      <img style="display:none;" src="./images/7.gif" alt="" id="frm7">
+      <img style="display:none;" src="./images/8.gif" alt="" id="frm8">
+      <img style="display:none;" src="./images/9.gif" alt="" id="frm9">
+      <img style="display:none;" src="./images/10.gif" alt="" id="frm10">
+      <img style="display:none;" src="./images/end.gif" alt="" id="frmend">
     </div>
-
-    <div id="hold">
-      <!-- Add a section that will hold the blanks that are going to be equal to the number of characters for the current word. -->
-    </div>
-
-    <p id="my-lives"></p> <!-- Add a counter from 10 that will decrease by 1 with every wrong guess. -->
-
-    <p id="clue">Clue -</p>
-
-    <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas> <!-- Add a div to show the man who's going to be hanged if you lose. -->
-
-    <div class="container">
-      <button id="hint">Hint</button> <!-- Bonus: Add a hint button. -->
-      <button id="reset">Play again</button> <!-- Add a button to play again. -->
-    </div>
-
   </div>
-
   <script src="./scripts/script.js"></script>
 
 </body>

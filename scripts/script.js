@@ -125,5 +125,90 @@ const loadData = (chosenWord) => {
       }
     }
   };
+
+    // canvas
+  myStickman = document.getElementById("stickman");
+  context = myStickman.getContext("2d");
+  lake= document.getElementById("lake")
+  context.drawImage(lake,0,580,800,350)
   
+  
+  
+  draw = function ($pathFromx, $pathFromy, $pathTox, $pathToy) {
+    context.moveTo($pathFromx, $pathFromy);
+    context.lineTo($pathTox, $pathToy);
+    context.stroke();
+  };
+  
+  canvas = function () {
+    frm0= document.getElementById('frm0')
+    context.drawImage(frm0,210,0)
+  }
+
+  frame1 = function(){
+    frm1= document.getElementById('frm1')
+    context.drawImage(frm1,210,0)
+  }
+
+  frame2 = function () {
+    frm2= document.getElementById('frm2')
+    context.drawImage(frm2,210,0)
+  };
+
+  frame3 = function () {
+    frm3= document.getElementById('frm3')
+    context.drawImage(frm3,210,0)
+  };
+
+  frame4 = function () {
+    frm4= document.getElementById('frm4')
+    context.drawImage(frm4,210,0)
+  };
+
+  head = function () {
+    frm5= document.getElementById('frm5')
+    context.drawImage(frm5,210,0)
+  };
+  
+  torso = function () {
+    frm6= document.getElementById('frm6')
+    context.drawImage(frm6,210,0)
+  };
+
+  rightArm = function () {
+    frm7= document.getElementById('frm7')
+    context.drawImage(frm7,210,0)
+  };
+
+  leftArm = function () {
+    frm8= document.getElementById('frm8')
+    context.drawImage(frm8,210,0)
+  };
+
+  rightLeg = function () {
+    frm9= document.getElementById('frm9')
+    context.drawImage(frm9,210,0)
+  };
+
+  leftLeg = function leftLeg () {
+    frm10= document.getElementById('frm10')
+    context.drawImage(frm10,210,0);
+    setTimeout (function () {
+      frmend= document.getElementById('frmend')
+      context.drawImage(frmend,0,160,800,840)
+    },1000);
+  };
+
+  drawArray = [
+    leftLeg,
+    rightLeg,
+    leftArm,
+    rightArm,
+    torso,
+    head,
+    frame4,
+    frame3,
+    frame2,
+    frame1,
+  ];
 }
