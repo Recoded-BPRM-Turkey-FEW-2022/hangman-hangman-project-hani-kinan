@@ -262,4 +262,21 @@ const loadData = (chosenWord) => {
 
   play();
 
+   // Hint Button
+
+   hint.onclick = function () {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${chosenWord}`)
+      .then((resp) => resp.json())
+      .then((meaning) => {
+      //console.log(meaning)
+      meaning.title === "No Definitions Found" ? showClue.innerHTML = "Clue: - " + meaning.message :  showClue.innerHTML = "Clue: - " + `${meaning[0].meanings[0].definitions[0].definition}`}
+       )
+  };
+
+  // Reset Button
+
+  document.getElementById("reset").onclick = function () {
+    location.reload();
+  };
+
 }
