@@ -86,4 +86,29 @@ const loadData = (chosenWord) => {
     }
   };
 
+
+  // Creating the guesses result section
+
+  result = function () {
+    wordHolder = document.getElementById("hold"); // getting the guesses section
+    correctLetters = document.createElement("ul"); // creating an ul of the correct letters of the random word
+
+    for (let i = 0; i < word.length; i++) {
+      // Looping through the random word
+      correctLetters.setAttribute("id", "my-word");
+      guess = document.createElement("li"); // creating the list inside the ul (correctLetters)
+      guess.setAttribute("class", "guess");
+      if (word[i] === "-") {
+        guess.innerHTML = "-";
+        space = 1;
+      } else {
+        guess.innerHTML = "_";
+      }
+
+      guessesList.push(guess);
+      wordHolder.appendChild(correctLetters);
+      correctLetters.appendChild(guess);
+    }
+  };
+
 }
