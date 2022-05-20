@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
+
+<!-- Add buttons that correspond to each letter from a to z. -->
+<!-- Add a section that will hold the blanks that are going to be equal to the number of characters for the current word. -->
+<!-- Add a div to show the man who's going to be hanged if you lose. -->
+<!-- Add a counter from 10 that will decrease by 1 with every wrong guess. -->
+<!-- Add a button to play again. -->
+
 <body>
-  
+  <div class="wrapper">
+    <h1>Hangman</h1>
+    <h2>Vanilla JavaScript Hangman Game</h2>
+    <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+  </div>
+
+  <div class="wrapper">
+    <div id="buttons">
+      <!-- Add buttons that correspond to each letter from a to z. -->
+    </div>
+
+    <div id="hold">
+      <!-- Add a section that will hold the blanks that are going to be equal to the number of characters for the current word. -->
+    </div>
+
+    <p id="my-lives"></p> <!-- Add a counter from 10 that will decrease by 1 with every wrong guess. -->
+
+    <p id="clue">Clue -</p>
+
+    <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas> <!-- Add a div to show the man who's going to be hanged if you lose. -->
+
+    <div class="container">
+      <button id="hint">Hint</button> <!-- Bonus: Add a hint button. -->
+      <button id="reset">Play again</button> <!-- Add a button to play again. -->
+    </div>
+
+  </div>
 
   <script src="./scripts/script.js"></script>
+
 </body>
+
 </html>
