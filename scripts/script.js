@@ -211,4 +211,9 @@ const loadData = (chosenWord) => {
     frame2,
     frame1,
   ];
+   // Animate canvas kid
+  const animate = function () {
+  const drawMe = lives;
+  drawArray[drawMe]();
+  };
 }
