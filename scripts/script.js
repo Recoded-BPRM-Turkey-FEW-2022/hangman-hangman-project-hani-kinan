@@ -111,4 +111,19 @@ const loadData = (chosenWord) => {
     }
   };
 
+
+  // Show lives counter
+
+  comments = function () {
+    showLives.innerHTML = "You have " + lives + " lives";
+    if (lives < 1) {
+      showLives.innerHTML = "Game Over";
+    }
+    for (let i = 0; i < guessesList.length; i++) {
+      if (counter + space === guessesList.length) {
+        showLives.innerHTML = "You Win!";
+      }
+    }
+  };
+  
 }
