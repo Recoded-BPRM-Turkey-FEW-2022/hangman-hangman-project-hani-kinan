@@ -216,4 +216,50 @@ const loadData = (chosenWord) => {
   const drawMe = lives;
   drawArray[drawMe]();
   };
+
+
+  // OnClick event listener
+
+  checkLetters = function () {
+    list.onclick = function () {
+      const guess = this.innerHTML;
+      this.setAttribute("class", "active");
+      this.onclick = null;
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === guess) {
+          guessesList[i].innerHTML = guess;
+          counter += 1;
+        }
+      }
+
+      const j = word.indexOf(guess);
+      if (j === -1) {
+        lives -= 1;
+        comments();
+        animate();
+      } else {
+        comments();
+      }
+    };
+  };
+
+  // Play
+
+  play = function () {
+    word = chosenWord[Math.floor(Math.random() * chosenWord.length)];
+    word = word.replace(/\s/g, "-");
+    //  console.log(word);
+    letterButtons();
+
+    guessesList = [];
+    lives = 10;
+    counter = 0;
+    space = 0;
+    result();
+    comments();
+    canvas();
+  };
+
+  play();
+
 }
